@@ -4,13 +4,21 @@ import { Home, About, Contact, Navigation } from './components';
 import { Route } from 'react-router-dom';
 
 const App = () => (
-  <div>
-    <Navigation>
-      <Route exact path='/' component={Home} />
-      <Route path='/about' component={About} />
-      <Route path='/contact' component={Contact} />
-    </Navigation>
-  </div>
+  <>
+    <Navigation />
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+
+      <Route exact path='/'>
+        <Home />
+      </Route>
+      <Route path='/about'>
+        <About />
+      </Route>
+      <Route path='/contact'>
+        <Contact />
+      </Route>
+    </div>
+  </>
 );
 
 export default App;
